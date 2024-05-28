@@ -1,0 +1,45 @@
+                  +---------------+
+                  |     users     |
+                  +---------------+
+                    | id (PK)       |
+                    | email         |
+                    | username      |
+                    | image_url     |
+                    | header_image_url |
+                    | bio           |
+                    | location      |
+                    | password      |
+                    +---------------+
+                            |
+                            |
+                            |
+                            v
+                  +---------------+
+                  |   messages    |
+                  +---------------+
+                    | id (PK)       |
+                    | text          |
+                    | timestamp     |
+                    | user_id (FK)  |
+                    +---------------+
+                            |
+                            |
+                            |
+                            v
+                  +---------------+
+                  |    follows    |
+                  +---------------+
+                    | user_being_followed_id (PK, FK) |
+                    | user_following_id (PK, FK)      |
+                    +---------------+
+                            |
+                            |
+                            |
+                            v
+                  +---------------+
+                  |     likes     |
+                  +---------------+
+                    | id (PK)       |
+                    | user_id (FK)  |
+                    | message_id (FK) |
+                    +---------------+
